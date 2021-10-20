@@ -1,0 +1,75 @@
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(57, 66, 75);
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: snow;
+}
+.overlay .x-knapp{
+    position: absolute;
+    right: 20px;
+    font-size: 70px;
+    cursor: pointer;
+}
+@media screen and (max-height: 450px){
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+@media screen and (max-width: 900px){
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}   
+#infofelt{
+    display: flex;
+    justify-content: center;
+}
+#headers{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45%;
+}
+.box{
+    width: 200px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-content: space-between;
+}
+.box a{
+    font-size: 16px;
+    align-self: flex-end;
+}

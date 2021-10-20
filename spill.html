@@ -1,0 +1,165 @@
+<!Doctype html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>Nuclear pong</title>
+    <link rel="icon" href="bilder/nuke.png">
+</head>
+<style>
+    .canvas_plassering{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    body{
+        background-image: url(bilder/bakgrunnTekst.png);
+    }
+    
+    #tap{
+        position: fixed;
+        top: 2%;
+        left: 28.21%;
+        z-index: 0;
+    }
+    
+    #seier{
+        position: fixed;
+        top: 2%;
+        left: 28.21%;
+        z-index: 0;
+    }
+    
+    #seierTrump{
+        position: fixed;
+        left: 10;
+        top: 10;
+    }
+    
+    #seierKim{
+        position: fixed;
+        right:10;
+        top: 10;
+    }
+    
+    #svar{
+        position: fixed;
+        top: 250px;
+        right: 500px;
+        font-size: 80px;
+        font-family: fantasy;
+    }
+    input {
+        position: relative;
+        top: 10px;
+        left: 600px;
+    }
+
+    button {
+        position: relative;
+        top: 10px;
+        left: 600px;
+        border-radius: 4px;
+        font-size: 24px;
+        background-color:seashell;
+        padding: 10px 20px;
+    }
+
+    .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(57, 66, 75);
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: snow;
+}
+.overlay .x-knapp{
+    position: absolute;
+    right: 20px;
+    font-size: 70px;
+    cursor: pointer;
+}
+@media screen and (max-height: 450px){
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+@media screen and (max-width: 900px){
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}   
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 350%;
+}
+#bakgrunn-video{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+}
+    
+</style>
+<body>
+   
+    <div id="meny" class="overlay">
+        <a class="x-knapp" onclick="lukkMeny()">&times;</a>
+        <div class="meny-innhold">
+            <a href="hjemmeside.html">Hjem</a>
+            <a href="spill.html">Spill</a>
+            <a href="omoss.html">Om Oss</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="raport.html">Raport</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openMeny()">&#9776; Meny</span>
+
+        <img style="display:none;" id="nuke" width="1" height="5" src="bilder/nuke.png" alt="The nuke">
+        <img style="display: none;" id="trumpKim" width="600" height="400" src="bilder/trump_kim.jpg" alt="Bakgrunn">
+        <img style="visibility: hidden;" id="tap" width="650" height="400" src="bilder/blast.gif" alt="BakgrunnTap">
+        <img style="visibility: hidden;" id="seier" width="650" height="400" src="bilder/usFlag.gif" alt="BakgrunnSeier">
+        <img style="visibility: hidden;" id="seierTrump" width="450" src="bilder/trump_poeng.gif" alt="Trump glad">
+        <img style="visibility: hidden;" id="seierKim" width="450" src="bilder/kimTap.gif" alt="Kim glad">
+    
+    <div class="canvas_plassering">
+        <canvas id="pong" width="600" height="400"></canvas>
+    </div>
+    
+        <h2 id="svar"></h2>
+    
+    <button onclick="lett()">Lett</button>
+    <button onclick="vanskelig()">Vanskelig</button>
+    <button onclick="start()">Start</button>
+    
+    <script type="text/javascript" src="pong.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Om Oss</title>
+    
+    <link rel="stylesheet" href="omoss-style.css">
+
+</head>
+
+<body>
+    
+    <div id="meny" class="overlay">
+        <a class="x-knapp" onclick="lukkMeny()">&times;</a>
+        <div class="meny-innhold">
+            <a href="hjemmeside.html">Hjem</a>
+            <a href="spill.html">Spill</a>
+            <a href="omoss.html">Om Oss</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="raport.html">Raport</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openMeny()">&#9776; Meny</span>
+
+    <div id="headers">
+        <h1>Om Oss</h1>
+        <h3>Utviklere</h3>
+    </div>
+    <div id="infofelt">
+        <div id="magnus" class="box">
+            <img src="bilder/magnus.jpg" width="150px" height="265px">
+            <a><b>Magnus Ross: </b>Prosjektleder og hovedprogramerer. Stor kar med et enda større hjerte</a>
+        </div>
+        <div id="christian" class="box">
+            <img src="bilder/christian.jpg" width="150px" height="265px">
+            <a><b>Christian Rostrup: </b>Nettsideutvikler og programeringsassistent.</a>
+        </div>
+        <div id="oliver" class="box">
+            <img src="bilder/oliver.jpg" width="150px" height="265px">
+            <a><b>Oliver Sletten: </b>Refferant og dokumentansvarlig. Organisert og tøff</a>
+        </div>
+        <div id="mathias" class="box">
+            <img src="bilder/mathias.jpg" width="150px" height="265px">
+            <a><b>Mathias Rønning: </b>Designer og sjef over alle kreative prosesser.</a>
+        </div>       
+
+    </div>
+    
+
+    <script>
+
+        function openMeny(){
+            document.getElementById("meny").style.width="20.5%";
+        }
+        function lukkMeny(){
+            document.getElementById("meny").style.width="0%";
+        }
+
+
+
+    </script>
+
+    
+</body>
+</html>

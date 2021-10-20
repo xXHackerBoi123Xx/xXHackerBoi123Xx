@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Hjemmeside</title>
+    
+    <link rel="stylesheet" href="hjemmeside-style.css">
+
+</head>
+
+<body>
+    
+    <div id="meny" class="overlay">
+        <a class="x-knapp" onclick="lukkMeny()">&times;</a>
+        <div class="meny-innhold">
+            <a href="hjemmeside.html">Hjem</a>
+            <a href="spill.html">Spill</a>
+            <a href="omoss.html">Om Oss</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="raport.html">Raport</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openMeny()">&#9776; Meny</span>
+    <h1>Pong</h1>
+    <a href="spill.html">
+    <img id="bakgrunn-video" src="bilder/pong-game.gif">
+    </a>
+    <br>
+    <div id="info">
+        <p>Pong er et spill der målet er å bruke sin platform til å sprette ballen forbi 
+        motstanderen sinplatform. Hver gang ballen treffer veggen bak platformen får
+        motstanderen ett poeng. Førstemann til 5 poeng vinner.</p>
+    </div> 
+
+    <script>
+
+        function openMeny(){
+            document.getElementById("meny").style.width="20.5%";
+        }
+        function lukkMeny(){
+            document.getElementById("meny").style.width="0%";
+        }
+
+
+
+    </script>
+
+    
+</body>
+</html>
