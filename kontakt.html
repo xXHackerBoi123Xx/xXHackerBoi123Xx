@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Kontakt</title>
+    
+    <link rel="stylesheet" href="kontakt-style.css">
+
+</head>
+
+<body>
+    
+    <div id="meny" class="overlay">
+        <a class="x-knapp" onclick="lukkMeny()">&times;</a>
+        <div class="meny-innhold">
+            <a href="hjemmeside.html">Hjem</a>
+            <a href="spill.html">Spill</a>
+            <a href="omoss.html">Om Oss</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="raport.html">Raport</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openMeny()">&#9776; Meny</span>
+    <h1>Kontakt</h1>
+    <div id="info">
+        <p>Email: ikkekontakt@epost.no</p>
+        <p>Telefon: +234 070 533 32</p>
+    </div> 
+
+    <script>
+
+        function openMeny(){
+            document.getElementById("meny").style.width="20.5%";
+        }
+        function lukkMeny(){
+            document.getElementById("meny").style.width="0%";
+        }
+
+    </script>
+
+    
+</body>
+</html>
